@@ -4,7 +4,7 @@
   "parameters": {
     "osDiskVhdUri": {
       "type": "string",
-	  "defaultValue": "https://xeroxdemo2.blob.core.windows.net/vhds/XeroxDemo.vhd",
+	  "defaultValue": "https://xeroxeuropedemossd.blob.core.windows.net/vhds/XeroxDemo.vhd",
       "metadata": {
         "description": "Uri of the existing VHD"
       }
@@ -18,14 +18,14 @@
     },
     "vmSize": {
       "type": "string",
-      "defaultValue": "Basic_A3",
+      "defaultValue": "Standard_F4s",
       "metadata": {
         "description": "Size of the VM"
       }
     },
     "vmName": {
       "type": "string",
-	  "defaultValue": "xeroxdemo2",
+	  "defaultValue": "XeroxEuropeDemo",
       "metadata": {
         "description": "Name of the VM"
       }
@@ -36,7 +36,7 @@
     "addressPrefix": "10.0.0.0/16",
     "subnetName": "Subnet",
     "subnetPrefix": "10.0.0.0/24",
-    "publicIPAddressName": "XeroxDemoIP2",
+    "publicIPAddressName": "XeroxEuropeDemoIP1",
     "publicIPAddressType": "Static",
     "virtualNetworkName": "specializedVMVNET1",
     "vnetID": "[resourceId('Microsoft.Network/virtualNetworks',variables('virtualNetworkName'))]",
@@ -98,9 +98,10 @@
       "location": "[resourceGroup().location]",
       "properties": {
         "publicIPAllocationMethod": "[variables('publicIPAddressType')]",
+		"ipAddress": "13.67.209.5",
 		"dnsSettings": {
-         "domainNameLabel": "xeroxdemo2",
-         "fqdn": "xeroxdemo2.centralus.cloudapp.azure.com"
+         "domainNameLabel": "xeroxeuropedemo",
+         "fqdn": "xeroxeuropedemo.westeurope.cloudapp.azure.com"
       }
       }
     },
