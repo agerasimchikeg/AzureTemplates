@@ -4,7 +4,7 @@
   "parameters": {
     "osDiskVhdUri": {
       "type": "string",
-	  "defaultValue": "https://xeroxdemo.blob.core.windows.net/vhds/XeroxDemo.vhd",
+	  "defaultValue": "https://xeroxgistore.blob.core.windows.net/vhds/XeroxDemo.vhd",
       "metadata": {
         "description": "Uri of the existing VHD"
       }
