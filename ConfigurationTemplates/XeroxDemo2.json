@@ -2,6 +2,19 @@
   "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
   "contentVersion": "1.0.0.0",
   "parameters": {
+    "userImageStorageAccountName": {
+      "type": "string",
+      "defaultValue": "xeroxdemo2ssd",
+      "metadata": {
+        "description": "This is the name of the your storage account"
+      }
+    },
+    "userImageStorageAccountResourceGroupName": {
+      "type": "string",
+      "defaultValue": "XeroxDemo2Store",
+      "metadata": {
+        "description": "Resource group of the existing storage account"
+      },
     "osDiskVhdUri": {
       "type": "string",
 	  "defaultValue": "https://xeroxdemo2ssd.blob.core.windows.net/vhds/XeroxDemo.vhd",
