@@ -95,7 +95,10 @@
       "name": "[variables('publicIPAddressName')]",
       "location": "[resourceGroup().location]",
       "properties": {
-        "publicIPAllocationMethod": "[variables('publicIPAddressType')]"
+        "publicIPAllocationMethod": "[variables('publicIPAddressType')]",
+		"dnsSettings": {
+         "domainNameLabel": "[parameters('vmName')]"
+      }
       }
     },
     {
