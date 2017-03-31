@@ -17,6 +17,7 @@
     },
     "vmSize": {
       "type": "string",
+      "defaultValue": "Standard_F4s",
       "metadata": {
         "description": "Size of the VM"
       }
@@ -33,6 +34,8 @@
     "addressPrefix": "10.0.0.0/16",
     "subnetName": "Subnet",
     "subnetPrefix": "10.0.0.0/24",
+    "publicIPAddressName": "XeroxDemoIP",
+    "publicIPAddressType": "Static",
     "virtualNetworkName": "specializedVMVNET1",
     "vnetID": "[resourceId('Microsoft.Network/virtualNetworks',variables('virtualNetworkName'))]",
     "subnetRef": "[concat(variables('vnetID'),'/subnets/',variables('subnetName'))]",
